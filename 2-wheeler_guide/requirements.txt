@@ -1,0 +1,8 @@
+langchain
+streamlit
+langchain-community==0.2.7
+chromadb
+ollama
+pypdf2
+bs4
+sentence_transformers
