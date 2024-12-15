@@ -1,0 +1,6 @@
+langchain 
+langchain_community 
+crewai 
+crewai_tools==0.4.8
+streamlit 
+python-dotenv
