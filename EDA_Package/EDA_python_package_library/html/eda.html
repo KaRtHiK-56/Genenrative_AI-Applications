@@ -1,0 +1,1865 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<meta name="generator" content="pdoc3 0.11.1">
+<title>eda API documentation</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css" integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/typography.min.css" integrity="sha512-Y1DYSb995BAfxobCkKepB1BqJJTPrOp3zPL74AWFugHHmmdcvO+C48WLrUOlhGMc0QG7AE3f7gmvvcrmX2fDoA==" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:1.5em;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:2em 0 .50em 0}h3{font-size:1.4em;margin:1.6em 0 .7em 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .2s ease-in-out}a:visited{color:#503}a:hover{color:#b62}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900;font-weight:bold}pre code{font-size:.8em;line-height:1.4em;padding:1em;display:block}code{background:#f3f3f3;font-family:"DejaVu Sans Mono",monospace;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em 1em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul ul{padding-left:1em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" integrity="sha512-D9gUyxqja7hBtkWpPWGt9wfbfaMGVt9gnyCvYa+jojwwPHLCzUm5i8rpk7vD7wNee9bA35eYIjobYPaQuKS1MQ==" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => {
+hljs.configure({languages: ['bash', 'css', 'diff', 'graphql', 'ini', 'javascript', 'json', 'plaintext', 'python', 'python-repl', 'rust', 'shell', 'sql', 'typescript', 'xml', 'yaml']});
+hljs.highlightAll();
+})</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>eda</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="eda.DataTypeHandler"><code class="flex name class">
+<span>class <span class="ident">DataTypeHandler</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>DataTypeHandler class to handle data type conversions for columns in a pandas DataFrame.</p>
+<p>The DataTypeHandler class provides methods to convert DataFrame columns to various data types,
+such as string, integer, float, and datetime. Each method includes error handling and provides
+feedback if the conversion fails.</p>
+<h2 id="parameters">Parameters</h2>
+<hr>
+<p>Column Name : pandas.DataFrame's Column name
+The DataFrame column name to be inspected.</p>
+<h2 id="returns">Returns:</h2>
+<p>Converted Datatype of the specified column</p>
+<h2 id="methods">Methods</h2>
+<p><strong>init</strong>(df)
+Initializes the class with a DataFrame.</p>
+<p>to_string(col)
+Converts a specified column in the DataFrame to string type.</p>
+<p>to_int(col)
+Converts a specified column in the DataFrame to integer type.</p>
+<p>to_float(col)
+Converts a specified column in the DataFrame to float type.</p>
+<p>to_datetime(col)
+Converts a specified column in the DataFrame to datetime type.</p>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; import pandas as pd
+&gt;&gt;&gt; df = pd.DataFrame({'A': [1, 2, 3], 'B': ['2023-01-01', '2023-02-01', '2023-03-01']})
+&gt;&gt;&gt; handler = DataTypeHandler(df)
+&gt;&gt;&gt; handler.to_string('A')
+Converted column 'A' to string.
+&gt;&gt;&gt; handler.to_int('A')
+Converted column 'A' to int.
+&gt;&gt;&gt; handler.to_float('A')
+Converted column 'A' to float.
+&gt;&gt;&gt; handler.to_datetime('B')
+Converted column 'B' to datetime from int.
+</code></pre>
+<p>Initializes the DataTypeHandler class with a DataFrame.</p>
+<h2 id="parameters_1">Parameters:</h2>
+<p>df : pandas.DataFrame
+The DataFrame to be inspected.</p>
+<h2 id="returns_1">Returns:</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class DataTypeHandler:
+    &#34;&#34;&#34;
+    DataTypeHandler class to handle data type conversions for columns in a pandas DataFrame.
+
+    The DataTypeHandler class provides methods to convert DataFrame columns to various data types,
+    such as string, integer, float, and datetime. Each method includes error handling and provides
+    feedback if the conversion fails.
+
+    Parameters:
+        -----------
+        Column Name : pandas.DataFrame&#39;s Column name
+            The DataFrame column name to be inspected.
+
+        Returns:
+        --------
+        Converted Datatype of the specified column
+
+    Methods
+    -------
+    __init__(df)
+        Initializes the class with a DataFrame.
+
+    to_string(col)
+        Converts a specified column in the DataFrame to string type.
+
+    to_int(col)
+        Converts a specified column in the DataFrame to integer type.
+
+    to_float(col)
+        Converts a specified column in the DataFrame to float type.
+
+    to_datetime(col)
+        Converts a specified column in the DataFrame to datetime type.
+
+    Example
+    -------
+    &gt;&gt;&gt; import pandas as pd
+    &gt;&gt;&gt; df = pd.DataFrame({&#39;A&#39;: [1, 2, 3], &#39;B&#39;: [&#39;2023-01-01&#39;, &#39;2023-02-01&#39;, &#39;2023-03-01&#39;]})
+    &gt;&gt;&gt; handler = DataTypeHandler(df)
+    &gt;&gt;&gt; handler.to_string(&#39;A&#39;)
+    Converted column &#39;A&#39; to string.
+    &gt;&gt;&gt; handler.to_int(&#39;A&#39;)
+    Converted column &#39;A&#39; to int.
+    &gt;&gt;&gt; handler.to_float(&#39;A&#39;)
+    Converted column &#39;A&#39; to float.
+    &gt;&gt;&gt; handler.to_datetime(&#39;B&#39;)
+    Converted column &#39;B&#39; to datetime from int.
+    &#34;&#34;&#34;
+
+    def __init__(df):
+        &#34;&#34;&#34;
+        Initializes the DataTypeHandler class with a DataFrame.
+
+        Parameters:
+        -----------
+        df : pandas.DataFrame
+            The DataFrame to be inspected.
+
+        Returns:
+        --------
+        None
+        &#34;&#34;&#34;
+        df = df
+
+    def to_string(col):
+        &#34;&#34;&#34;
+        Converts a specified column in the DataFrame to string type.
+
+        Parameters
+        ----------
+        col : str
+            The column name to be converted to string.
+
+        Returns
+        -------
+        String converted column of the specified column.
+
+        Example
+        -------
+        &gt;&gt;&gt; handler.to_string(&#39;A&#39;)
+        Converted column &#39;A&#39; to string.
+        &#34;&#34;&#34;
+
+        try:
+            df[col] = df[col].astype(str)
+            print(f&#34;Converted column &#39;{col}&#39; to string.&#34;)
+        except Exception as e:
+            print(f&#34;Error converting &#39;{col}&#39; to string: {e}&#34;)
+
+    def to_int(col):
+        &#34;&#34;&#34;
+        Converts a specified column in the DataFrame to integer type.
+
+        Parameters
+        ----------
+        col : str
+            The column name to be converted to integer.
+
+        Returns
+        -------
+        Integer converted column of the specified column.
+
+        Example
+        -------
+        &gt;&gt;&gt; handler.to_int(&#39;A&#39;)
+        Converted column &#39;A&#39; to int.
+        &#34;&#34;&#34;
+        try:
+            df[col] = pd.to_numeric(df[col], errors=&#34;coerce&#34;).astype(&#34;Int64&#34;)
+            print(f&#34;Converted column &#39;{col}&#39; to int.&#34;)
+        except Exception as e:
+            print(f&#34;Error converting &#39;{col}&#39; to int: {e}&#34;)
+
+    def to_float(col):
+        &#34;&#34;&#34;
+        Converts a specified column in the DataFrame to float type.
+
+        Parameters
+        ----------
+        col : str
+            The column name to be converted to float.
+
+        Returns
+        -------
+        Float converted column of the specified column.
+
+        Example
+        -------
+        &gt;&gt;&gt; handler.to_float(&#39;A&#39;)
+        Converted column &#39;A&#39; to float.
+        &#34;&#34;&#34;
+        try:
+            df[col] = pd.to_numeric(df[col], errors=&#34;coerce&#34;).astype(float)
+            print(f&#34;Converted column &#39;{col}&#39; to float.&#34;)
+        except Exception as e:
+            print(f&#34;Error converting &#39;{col}&#39; to float: {e}&#34;)
+
+    def to_datetime(col):
+        &#34;&#34;&#34;
+        Converts a specified column in the DataFrame to datetime type.
+
+        Parameters
+        ----------
+        col : str
+            The column name to be converted to datetime.
+
+        Returns
+        -------
+        Datetime converted column of the specified column.
+
+        Example
+        -------
+        &gt;&gt;&gt; handler.to_datetime(&#39;B&#39;)
+        Converted column &#39;B&#39; to datetime from int.
+        &#34;&#34;&#34;
+        try:
+            df[col] = pd.to_datetime(df[col], errors=&#34;coerce&#34;)
+            print(f&#34;Converted column &#39;{col}&#39; to datetime from int.&#34;)
+        except Exception as e:
+            print(f&#34;Error converting &#39;{col}&#39; to datetime from int: {e}&#34;)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="eda.DataTypeHandler.to_datetime"><code class="name flex">
+<span>def <span class="ident">to_datetime</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Converts a specified column in the DataFrame to datetime type.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The column name to be converted to datetime.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Datetime converted column of the specified column.</p>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; handler.to_datetime('B')
+Converted column 'B' to datetime from int.
+</code></pre></div>
+</dd>
+<dt id="eda.DataTypeHandler.to_float"><code class="name flex">
+<span>def <span class="ident">to_float</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Converts a specified column in the DataFrame to float type.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The column name to be converted to float.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Float converted column of the specified column.</p>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; handler.to_float('A')
+Converted column 'A' to float.
+</code></pre></div>
+</dd>
+<dt id="eda.DataTypeHandler.to_int"><code class="name flex">
+<span>def <span class="ident">to_int</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Converts a specified column in the DataFrame to integer type.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The column name to be converted to integer.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Integer converted column of the specified column.</p>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; handler.to_int('A')
+Converted column 'A' to int.
+</code></pre></div>
+</dd>
+<dt id="eda.DataTypeHandler.to_string"><code class="name flex">
+<span>def <span class="ident">to_string</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Converts a specified column in the DataFrame to string type.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The column name to be converted to string.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>String converted column of the specified column.</p>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; handler.to_string('A')
+Converted column 'A' to string.
+</code></pre></div>
+</dd>
+</dl>
+</dd>
+<dt id="eda.Inspection"><code class="flex name class">
+<span>class <span class="ident">Inspection</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>Inspection class used to inspect and summarize key statistics and information about a given DataFrame.
+The Inspection class provides detailed insights into the DataFrame's size, shape, dimensions,
+column types, missing and duplicated values, numerical and categorical columns, skewness, and
+kurtosis of numerical data.</p>
+<h2 id="attributes">Attributes:</h2>
+<p>DataFrame</p>
+<h2 id="methods">Methods:</h2>
+<p><strong>init</strong>(df):
+Initializes the Inspection class with a DataFrame.</p>
+<p>inspect():
+Provides a detailed analysis of the DataFrame including size, shape, dimensions, column details,
+data types, missing and duplicated values, and summary statistics of numerical columns,
+including skewness and kurtosis.</p>
+<h2 id="example">Example:</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; import pandas as pd
+&gt;&gt;&gt; from scipy.stats import skew, kurtosis
+</code></pre>
+<pre><code class="language-python-repl">&gt;&gt;&gt; # Sample DataFrame creation
+&gt;&gt;&gt; data = {
+...     'A': [1, 2, 3, 4, 5],
+...     'B': [2.5, 3.6, 8.9, 7.3, 1.2],
+...     'C': ['X', 'Y', 'Z', 'X', 'Y'],
+...     'D': pd.to_datetime(['2023-01-01', '2023-01-02', '2023-01-03', '2023-01-04', '2023-01-05'])
+... }
+&gt;&gt;&gt; df = pd.DataFrame(data)
+</code></pre>
+<pre><code class="language-python-repl">&gt;&gt;&gt; # Initialize the Inspection class
+&gt;&gt;&gt; inspection = Inspection(df)
+</code></pre>
+<pre><code class="language-python-repl">&gt;&gt;&gt; # Perform inspection
+&gt;&gt;&gt; inspection.inspect()
+</code></pre>
+<h2 id="output">Output:</h2>
+<p>Processing column for calculating skewness: A
+Skewness of 'A': 0.0
+'A' is Approximately Symmetric.</p>
+<p>Processing column for kurtosis calculation: A
+Kurtosis of 'A': -1.2
+'A' is Platykurtic (light tails of outliers).</p>
+<p>&hellip;
+(other outputs summarizing the DataFrame)
+&hellip;</p>
+<p>Initializes the Inspection class with a DataFrame.</p>
+<h2 id="parameters">Parameters:</h2>
+<p>df : pandas.DataFrame
+The DataFrame to be inspected.</p>
+<h2 id="returns">Returns:</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Inspection:
+    &#34;&#34;&#34;
+    Inspection class used to inspect and summarize key statistics and information about a given DataFrame.
+    The Inspection class provides detailed insights into the DataFrame&#39;s size, shape, dimensions,
+    column types, missing and duplicated values, numerical and categorical columns, skewness, and
+    kurtosis of numerical data.
+
+    Attributes:
+    -----------
+    DataFrame
+
+    Methods:
+    --------
+    __init__(df):
+        Initializes the Inspection class with a DataFrame.
+
+    inspect():
+        Provides a detailed analysis of the DataFrame including size, shape, dimensions, column details,
+        data types, missing and duplicated values, and summary statistics of numerical columns,
+        including skewness and kurtosis.
+
+    Example:
+    --------
+    &gt;&gt;&gt; import pandas as pd
+    &gt;&gt;&gt; from scipy.stats import skew, kurtosis
+
+    &gt;&gt;&gt; # Sample DataFrame creation
+    &gt;&gt;&gt; data = {
+    ...     &#39;A&#39;: [1, 2, 3, 4, 5],
+    ...     &#39;B&#39;: [2.5, 3.6, 8.9, 7.3, 1.2],
+    ...     &#39;C&#39;: [&#39;X&#39;, &#39;Y&#39;, &#39;Z&#39;, &#39;X&#39;, &#39;Y&#39;],
+    ...     &#39;D&#39;: pd.to_datetime([&#39;2023-01-01&#39;, &#39;2023-01-02&#39;, &#39;2023-01-03&#39;, &#39;2023-01-04&#39;, &#39;2023-01-05&#39;])
+    ... }
+    &gt;&gt;&gt; df = pd.DataFrame(data)
+
+    &gt;&gt;&gt; # Initialize the Inspection class
+    &gt;&gt;&gt; inspection = Inspection(df)
+
+    &gt;&gt;&gt; # Perform inspection
+    &gt;&gt;&gt; inspection.inspect()
+
+    Output:
+    --------
+    Processing column for calculating skewness: A
+    Skewness of &#39;A&#39;: 0.0
+    &#39;A&#39; is Approximately Symmetric.
+
+    Processing column for kurtosis calculation: A
+    Kurtosis of &#39;A&#39;: -1.2
+    &#39;A&#39; is Platykurtic (light tails of outliers).
+
+    ...
+    (other outputs summarizing the DataFrame)
+    ...
+    &#34;&#34;&#34;
+
+    def __init__(df):
+        &#34;&#34;&#34;
+        Initializes the Inspection class with a DataFrame.
+
+        Parameters:
+        -----------
+        df : pandas.DataFrame
+            The DataFrame to be inspected.
+
+        Returns:
+        --------
+        None
+        &#34;&#34;&#34;
+        df = df
+
+    def inspect():
+        &#34;&#34;&#34;
+        Provides a detailed analysis of the DataFrame, including size, shape, dimensions, column details,
+        data types, missing and duplicated values, and summary statistics of numerical columns, including
+        skewness and kurtosis.
+
+        Parameters:
+        -----------
+        None
+
+        Returns:
+        --------
+        Detailed report of the Dataframe
+
+        The method prints out the following information:
+        - Total number of elements in the DataFrame
+        - Shape of the DataFrame
+        - Number of dimensions of the DataFrame
+        - Basic information about the DataFrame (using `info()`)
+        - Statistical summary (using `describe()`)
+        - Names and count of columns
+        - Data types of the columns
+        - Number and percentage of duplicated values
+        - Number and percentage of missing values
+        - Summary of numerical and categorical columns
+        - Correlation matrix of numerical columns
+        - Skewness and kurtosis calculations for numerical columns
+
+        &#34;&#34;&#34;
+
+        size = df.size
+        shape = df.shape
+        dimentions = df.ndim
+        info = df.info()
+        summary = df.describe()
+        columns = df.columns
+        n_col = len(columns)
+        types = df.dtypes
+        duplicated = df.duplicated().sum()
+        p_dup = duplicated / (len(df) * 100)
+        missing = df.isnull().sum()
+        p_miss = missing / (len(df) * 100)
+        numeric = df.select_dtypes(include=[&#34;int64&#34;, &#34;float64&#34;])
+        n_num = len(numeric)
+        categoical = df.select_dtypes(exclude=[&#34;int64&#34;, &#34;float64&#34;])
+        n_cat = len(categoical)
+        datetime = df.select_dtypes(include=[&#34;datetime64&#34;])
+        corr = df.corr(numeric_only=True)
+
+        for col in numeric.columns:
+            print(f&#34;\nProcessing column for calculating skewness: {col}&#34;)
+
+            skewness_value = skew(
+                numeric[col].dropna()
+            )  # Dropping NaN to avoid skew calculation issues
+            print(f&#34;Skewness of &#39;{col}&#39;: {skewness_value}&#34;)
+
+            if skewness_value &gt; 1:
+                print(f&#34;&#39;{col}&#39; is Highly Positively Skewed(Right Skewed).&#34;)
+            elif 0.5 &lt; skewness_value &lt;= 1:
+                print(f&#34;&#39;{col}&#39; is Moderately Positively Skewed.&#34;)
+            elif -0.5 &lt;= skewness_value &lt;= 0.5:
+                print(f&#34;&#39;{col}&#39; is Approximately Symmetric.&#34;)
+            elif -1 &lt;= skewness_value &lt; -0.5:
+                print(f&#34;&#39;{col}&#39; is Moderately Negatively Skewed(Left Skewed).&#34;)
+            else:
+                print(f&#34;&#39;{col}&#39; is Highly Negatively Skewed.&#34;)
+
+        for col in numeric.columns:
+            print(f&#34;\nProcessing column for kurtosis calculation: {col}&#34;)
+
+            kurtosis_value = kurtosis(
+                numeric[col].dropna()
+            )  # Dropping NaN to avoid calculation issues
+            print(f&#34;Kurtosis of &#39;{col}&#39;: {kurtosis_value}&#34;)
+
+            if kurtosis_value &gt; 0:
+                print(f&#34;&#39;{col}&#39; is Leptokurtic (heavy tails of outliers).&#34;)
+            elif kurtosis_value == 0:
+                print(f&#34;&#39;{col}&#39; is Mesokurtic (normal distribution).&#34;)
+            else:
+                print(f&#34;&#39;{col}&#39; is Platykurtic (light tails of outliers).&#34;)
+
+        print(&#34;Total no. of elements: &#34;, size)
+        print(&#34;*&#34; * 100)
+        print(&#34;Shape of the dataset: &#34;, shape)
+        print(&#34;*&#34; * 100)
+        print(&#34;Dimentions of the dataset: &#34;, dimentions)
+        print(&#34;*&#34; * 100)
+        print(&#34;Information of the dataset: &#34;, info)
+        print(&#34;*&#34; * 100)
+        print(&#34;Statistical summary of the dataset: &#34;, summary)
+        print(&#34;*&#34; * 100)
+        print(&#34;Name of the columns: &#34;, columns)
+        print(&#34;*&#34; * 100)
+        print(&#34;Total no. of columns: &#34;, n_col)
+        print(&#34;*&#34; * 100)
+        print(&#34;Datatypes of the dataset: &#34;, types)
+        print(&#34;*&#34; * 100)
+        print(&#34;No. of duplicated values: &#34;, duplicated)
+        print(&#34;*&#34; * 100)
+        print(&#34;Percentage (%) of duplicated values: &#34;, p_dup * 100)
+        print(&#34;*&#34; * 100)
+        print(&#34;No. of missing values: &#34;, missing)
+        print(&#34;*&#34; * 100)
+        print(&#34;Percentage (%) of missing values: &#34;, p_miss * 100)
+        print(&#34;*&#34; * 100)
+        print(&#34;Numerical columns are: &#34;, numeric)
+        print(&#34;*&#34; * 100)
+        print(&#34;No. of numrerical columns are: &#34;, n_num)
+        print(&#34;*&#34; * 100)
+        print(&#34;Categoical cloumns are: &#34;, categoical)
+        print(&#34;*&#34; * 100)
+        print(&#34;No. of categoical columns are: &#34;, n_col)
+        print(&#34;*&#34; * 100)
+        print(&#34;Date type columns are: &#34;, datetime)
+        print(&#34;*&#34; * 100)
+        print(&#34;Numerical correlations: &#34;, corr)
+        print(&#34;*&#34; * 100)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="eda.Inspection.inspect"><code class="name flex">
+<span>def <span class="ident">inspect</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Provides a detailed analysis of the DataFrame, including size, shape, dimensions, column details,
+data types, missing and duplicated values, and summary statistics of numerical columns, including
+skewness and kurtosis.</p>
+<h2 id="parameters">Parameters:</h2>
+<p>None</p>
+<h2 id="returns">Returns:</h2>
+<p>Detailed report of the Dataframe</p>
+<p>The method prints out the following information:
+- Total number of elements in the DataFrame
+- Shape of the DataFrame
+- Number of dimensions of the DataFrame
+- Basic information about the DataFrame (using <code>info()</code>)
+- Statistical summary (using <code>describe()</code>)
+- Names and count of columns
+- Data types of the columns
+- Number and percentage of duplicated values
+- Number and percentage of missing values
+- Summary of numerical and categorical columns
+- Correlation matrix of numerical columns
+- Skewness and kurtosis calculations for numerical columns</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="eda.MissingValueHandler"><code class="flex name class">
+<span>class <span class="ident">MissingValueHandler</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>A class for handling missing values in a pandas DataFrame using various imputation techniques.</p>
+<p>This class provides several methods for filling missing values in numeric columns of a DataFrame
+using mean, median, mode, forward fill, backward fill, linear interpolation, and polynomial interpolation.
+It also provides a method to drop rows with missing values in a specified column.</p>
+<h2 id="methods">Methods</h2>
+<p><strong>init</strong>(df):
+Initializes the MissingValueHandler with a DataFrame.
+mean(col):
+Fills missing values in the specified column using the mean.
+median(col):
+Fills missing values in the specified column using the median.
+mode(col):
+Fills missing values in the specified column using the mode.
+b_fill(col):
+Fills missing values in the specified column using backward fill.
+f_fill(col):
+Fills missing values in the specified column using forward fill.
+linear(col):
+Fills missing values in the specified column using linear interpolation.
+polynomial(col):
+Fills missing values in the specified column using second-order polynomial interpolation.
+drop(col):
+Drops rows with missing values in the specified column.</p>
+<h2 id="example">Example</h2>
+<h1 id="example-usage">Example usage:</h1>
+<p>import pandas as pd</p>
+<h1 id="create-a-sample-dataframe">Create a sample DataFrame</h1>
+<p>data = {'A': [1, 2, None, 4, 5],
+'B': [None, 2, 3, None, 5],
+'C': ['a', 'b', 'c', 'd', None]}</p>
+<p>df = pd.DataFrame(data)</p>
+<h1 id="initialize-the-missingvaluehandler-class-with-the-dataframe">Initialize the MissingValueHandler class with the DataFrame</h1>
+<p>handler = MissingValueHandler(df)</p>
+<h1 id="fill-missing-values-in-column-a-using-mean">Fill missing values in column 'A' using mean</h1>
+<p>handler.mean('A')</p>
+<h1 id="fill-missing-values-in-column-b-using-median">Fill missing values in column 'B' using median</h1>
+<p>handler.median('B')</p>
+<h1 id="drop-rows-with-missing-values-in-column-c">Drop rows with missing values in column 'C'</h1>
+<p>handler.drop('C')</p>
+<p>Initializes the Inspection class with a DataFrame.</p>
+<h2 id="parameters">Parameters:</h2>
+<p>df : pandas.DataFrame
+The DataFrame to be inspected.</p>
+<h2 id="returns">Returns:</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class MissingValueHandler:
+    &#34;&#34;&#34;
+    A class for handling missing values in a pandas DataFrame using various imputation techniques.
+
+    This class provides several methods for filling missing values in numeric columns of a DataFrame
+    using mean, median, mode, forward fill, backward fill, linear interpolation, and polynomial interpolation.
+    It also provides a method to drop rows with missing values in a specified column.
+
+    Methods
+    -------
+    __init__(df):
+        Initializes the MissingValueHandler with a DataFrame.
+    mean(col):
+        Fills missing values in the specified column using the mean.
+    median(col):
+        Fills missing values in the specified column using the median.
+    mode(col):
+        Fills missing values in the specified column using the mode.
+    b_fill(col):
+        Fills missing values in the specified column using backward fill.
+    f_fill(col):
+        Fills missing values in the specified column using forward fill.
+    linear(col):
+        Fills missing values in the specified column using linear interpolation.
+    polynomial(col):
+        Fills missing values in the specified column using second-order polynomial interpolation.
+    drop(col):
+        Drops rows with missing values in the specified column.
+
+    Example
+    -------
+    # Example usage:
+    import pandas as pd
+
+    # Create a sample DataFrame
+    data = {&#39;A&#39;: [1, 2, None, 4, 5],
+            &#39;B&#39;: [None, 2, 3, None, 5],
+            &#39;C&#39;: [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, None]}
+
+    df = pd.DataFrame(data)
+
+    # Initialize the MissingValueHandler class with the DataFrame
+    handler = MissingValueHandler(df)
+
+    # Fill missing values in column &#39;A&#39; using mean
+    handler.mean(&#39;A&#39;)
+
+    # Fill missing values in column &#39;B&#39; using median
+    handler.median(&#39;B&#39;)
+
+    # Drop rows with missing values in column &#39;C&#39;
+    handler.drop(&#39;C&#39;)
+    &#34;&#34;&#34;
+
+    def __init__(df):
+        &#34;&#34;&#34;
+        Initializes the Inspection class with a DataFrame.
+
+        Parameters:
+        -----------
+        df : pandas.DataFrame
+            The DataFrame to be inspected.
+
+        Returns:
+        --------
+        None
+        &#34;&#34;&#34;
+        df = df
+
+    def mean(col):
+        &#34;&#34;&#34;
+        Fills missing values in the specified column using the mean.
+
+        Parameters
+        ----------
+        col : str
+            The name of the column to fill missing values.
+
+        Returns
+        -------
+        Missed values column/row filled with its mean value.
+        &#34;&#34;&#34;
+        try:
+            if df[col].dtype in [&#34;int64&#34;, &#34;float64&#34;]:
+                mean_value = df[col].mean()
+                df[col].fillna(mean_value, inplace=True)
+                print(f&#34;Filled missing values in &#39;{col}&#39; with mean: {mean_value}&#34;)
+            else:
+                print(f&#34;Cannot fill for column &#39;{col}&#39; as it is non-numeric&#34;)
+
+        except Exception as e:
+            print(f&#34;Cannot fill mean for column &#39;{col}&#39; due to &#39;{e}&#39;.&#34;)
+
+    def median(col):
+        &#34;&#34;&#34;
+        Fills missing values in the specified column using the median.
+
+        Parameters
+        ----------
+        col : str
+            The name of the column to fill missing values.
+
+        Returns
+        -------
+        Missed values column/row filled with its median value.
+        &#34;&#34;&#34;
+        try:
+            if df[col].dtype in [&#34;int64&#34;, &#34;float64&#34;]:
+                median_value = df[col].median()
+                df[col].fillna(median_value, inplace=True)
+                print(f&#34;Filled missing values in &#39;{col}&#39; with mean: {median_value}&#34;)
+            else:
+                print(f&#34;Cannot fill for column &#39;{col}&#39; as it is non-numeric&#34;)
+
+        except Exception as e:
+            print(f&#34;Cannot fill median for column &#39;{col}&#39; due to &#39;{e}&#39;.&#34;)
+
+    def mode(col):
+        &#34;&#34;&#34;
+        Fills missing values in the specified column using the mode.
+
+        Parameters
+        ----------
+        col : str
+            The name of the column to fill missing values.
+
+        Returns
+        -------
+        Missed values column/row filled with its mode value.
+        &#34;&#34;&#34;
+        try:
+            if df[col].dtype in [&#34;int64&#34;, &#34;float64&#34;]:
+                median_value = df[col].mode().iloc[0]
+                df[col].fillna(median_value, inplace=True)
+                print(f&#34;Filled missing values in &#39;{col}&#39; with mean: {median_value}&#34;)
+            else:
+                print(f&#34;Cannot fill for column &#39;{col}&#39; as it is non-numeric&#34;)
+
+        except Exception as e:
+            print(f&#34;Cannot fill mode for column &#39;{col}&#39; due to &#39;{e}&#39;.&#34;)
+
+    def b_fill(col):
+        &#34;&#34;&#34;
+        Fills missing values in the specified column using backward fill.
+
+        Parameters
+        ----------
+        col : str
+            The name of the column to fill missing values.
+
+        Returns
+        -------
+        Missed values column/row filled with its Backward fill value.
+        &#34;&#34;&#34;
+        try:
+            if df[col].dtype in [&#34;int64&#34;, &#34;float64&#34;]:
+                df[col].bfill(inplace=True)
+                print(f&#34;Filled missing values in &#39;{col}&#39; using backward fill.&#34;)
+            else:
+                print(f&#34;Cannot fill for column &#39;{col}&#39; as it is non-numeric&#34;)
+
+        except Exception as e:
+            print(f&#34;Cannot bfill for column &#39;{col}&#39; due to &#39;{e}&#39;.&#34;)
+
+    def f_fill(col):
+        &#34;&#34;&#34;
+        Fills missing values in the specified column using forward fill.
+
+        Parameters
+        ----------
+        col : str
+            The name of the column to fill missing values.
+
+        Returns
+        -------
+        Missed values column/row filled with its Forward fill value.
+        &#34;&#34;&#34;
+        try:
+            if df[col].dtype in [&#34;int64&#34;, &#34;float64&#34;]:
+                df[col].ffill(inplace=True)
+                print(f&#34;Filled missing values in &#39;{col}&#39; using forward fill.&#34;)
+            else:
+                print(f&#34;Cannot fill for column &#39;{col}&#39; as it is non-numeric&#34;)
+
+        except Exception as e:
+            print(f&#34;Cannot ffill for column &#39;{col}&#39; due to &#39;{e}&#39;.&#34;)
+
+    def linear(col):
+        &#34;&#34;&#34;
+        Fills missing values in the specified column using linear interpolation(y=mx+c).
+
+        Parameters
+        ----------
+        col : str
+            The name of the column to fill missing values.
+
+        Returns
+        -------
+        Missed values column/row filled with its linear interpolation value.
+        &#34;&#34;&#34;
+        try:
+            if df[col].dtype in [&#34;int64&#34;, &#34;float64&#34;]:
+                df[col] = df[col].interpolate(method=&#34;linear&#34;)
+                print(f&#34;Filled missing values in &#39;{col}&#39; using linear value.&#34;)
+            else:
+                print(f&#34;Cannot fill for column &#39;{col}&#39; as it is non-numeric&#34;)
+
+        except Exception as e:
+            print(f&#34;Cannot linear fill for column &#39;{col}&#39; due to &#39;{e}&#39;.&#34;)
+
+    def polynomial(col):
+        &#34;&#34;&#34;
+        Fills missing values in the specified column using 2nd order quadratic interpolation(ax^2+bx+c=0).
+
+        Parameters
+        ----------
+        col : str
+            The name of the column to fill missing values.
+
+        Returns
+        -------
+        Missed values column/row filled with its quadratic interpolation value.
+        &#34;&#34;&#34;
+        try:
+            if df[col].dtype in [&#34;int64&#34;, &#34;float64&#34;]:
+                df[col] = df[col].interpolate(method=&#34;polynomial&#34;, order=2)
+                print(f&#34;Filled missing values in &#39;{col}&#39; using polynomial value.&#34;)
+            else:
+                print(f&#34;Cannot fill for column &#39;{col}&#39; as it is non-numeric&#34;)
+
+        except Exception as e:
+            print(f&#34;Cannot polynomial fill for column &#39;{col}&#39; due to &#39;{e}&#39;.&#34;)
+
+    def drop(col):
+        &#34;&#34;&#34;
+        Drops rows with missing values in the specified column.
+
+        Parameters
+        ----------
+        col : str
+            The name of the column to drop rows with missing values.
+
+        Returns
+        -------
+        Dropped/Deleted column/row
+        &#34;&#34;&#34;
+        try:
+            initial_count = df.shape[0]
+            df.dropna(subset=[col], inplace=True)
+            final_count = df.shape[0]
+            print(
+                f&#34;Dropped rows with missing values in &#39;{col}&#39;. Rows removed: {initial_count - final_count}&#34;
+            )
+        except Exception as e:
+            print(f&#34;Cannot drop/delete values for column &#39;{col}&#39; due to &#39;{e}&#39;.&#34;)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="eda.MissingValueHandler.b_fill"><code class="name flex">
+<span>def <span class="ident">b_fill</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fills missing values in the specified column using backward fill.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the column to fill missing values.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Missed values column/row filled with its Backward fill value.</p></div>
+</dd>
+<dt id="eda.MissingValueHandler.drop"><code class="name flex">
+<span>def <span class="ident">drop</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Drops rows with missing values in the specified column.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the column to drop rows with missing values.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Dropped/Deleted column/row</code></dt>
+<dd>&nbsp;</dd>
+</dl></div>
+</dd>
+<dt id="eda.MissingValueHandler.f_fill"><code class="name flex">
+<span>def <span class="ident">f_fill</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fills missing values in the specified column using forward fill.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the column to fill missing values.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Missed values column/row filled with its Forward fill value.</p></div>
+</dd>
+<dt id="eda.MissingValueHandler.linear"><code class="name flex">
+<span>def <span class="ident">linear</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fills missing values in the specified column using linear interpolation(y=mx+c).</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the column to fill missing values.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Missed values column/row filled with its linear interpolation value.</p></div>
+</dd>
+<dt id="eda.MissingValueHandler.mean"><code class="name flex">
+<span>def <span class="ident">mean</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fills missing values in the specified column using the mean.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the column to fill missing values.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Missed values column/row filled with its mean value.</p></div>
+</dd>
+<dt id="eda.MissingValueHandler.median"><code class="name flex">
+<span>def <span class="ident">median</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fills missing values in the specified column using the median.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the column to fill missing values.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Missed values column/row filled with its median value.</p></div>
+</dd>
+<dt id="eda.MissingValueHandler.mode"><code class="name flex">
+<span>def <span class="ident">mode</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fills missing values in the specified column using the mode.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the column to fill missing values.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Missed values column/row filled with its mode value.</p></div>
+</dd>
+<dt id="eda.MissingValueHandler.polynomial"><code class="name flex">
+<span>def <span class="ident">polynomial</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Fills missing values in the specified column using 2nd order quadratic interpolation(ax^2+bx+c=0).</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the column to fill missing values.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Missed values column/row filled with its quadratic interpolation value.</p></div>
+</dd>
+</dl>
+</dd>
+<dt id="eda.NumericalScaler"><code class="flex name class">
+<span>class <span class="ident">NumericalScaler</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>A class for scaling numerical columns in a DataFrame using different scalers.</p>
+<p>The NumericalScaler class provides functionality to scale numerical columns
+in a pandas DataFrame using either the Standard Scaler or the Robust Scaler
+from the scikit-learn library. It automatically detects if the specified column
+is numeric before applying the scaling.</p>
+<h2 id="methods">Methods</h2>
+<p><strong>init</strong>(df)
+Initializes the class with a DataFrame.</p>
+<p>standardscaler(col)
+Applies Standard Scaler to a specified numerical column in the DataFrame.</p>
+<p>robustscaler(col)
+Applies Robust Scaler to a specified numerical column in the DataFrame.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>df</code></strong> :&ensp;<code>pandas.DataFrame</code></dt>
+<dd>The DataFrame containing the columns to be scaled.</dd>
+</dl>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; data = {'A': [1, 2, 3, 4, 5], 'B': [10, 20, 30, 40, 50], 'C': ['a', 'b', 'c', 'd', 'e']}
+&gt;&gt;&gt; df = pd.DataFrame(data)
+&gt;&gt;&gt; scaler = NumericalScaler(df)
+&gt;&gt;&gt; scaler.standardscaler('A')
+'A' has been scaled using Standard Scaler.
+&gt;&gt;&gt; scaler.robustscaler('B')
+'B' has been scaled using Robust Scaler.
+</code></pre>
+<p>Initializes the Inspection class with a DataFrame.</p>
+<h2 id="parameters_1">Parameters:</h2>
+<p>df : pandas.DataFrame
+The DataFrame to be inspected.</p>
+<h2 id="returns">Returns:</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class NumericalScaler:
+    &#34;&#34;&#34;
+    A class for scaling numerical columns in a DataFrame using different scalers.
+
+    The NumericalScaler class provides functionality to scale numerical columns
+    in a pandas DataFrame using either the Standard Scaler or the Robust Scaler
+    from the scikit-learn library. It automatically detects if the specified column
+    is numeric before applying the scaling.
+
+    Methods
+    -------
+    __init__(df)
+        Initializes the class with a DataFrame.
+
+    standardscaler(col)
+        Applies Standard Scaler to a specified numerical column in the DataFrame.
+
+    robustscaler(col)
+        Applies Robust Scaler to a specified numerical column in the DataFrame.
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        The DataFrame containing the columns to be scaled.
+
+    Example
+    -------
+    &gt;&gt;&gt; data = {&#39;A&#39;: [1, 2, 3, 4, 5], &#39;B&#39;: [10, 20, 30, 40, 50], &#39;C&#39;: [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;]}
+    &gt;&gt;&gt; df = pd.DataFrame(data)
+    &gt;&gt;&gt; scaler = NumericalScaler(df)
+    &gt;&gt;&gt; scaler.standardscaler(&#39;A&#39;)
+    &#39;A&#39; has been scaled using Standard Scaler.
+    &gt;&gt;&gt; scaler.robustscaler(&#39;B&#39;)
+    &#39;B&#39; has been scaled using Robust Scaler.
+    &#34;&#34;&#34;
+
+    def __init__(df):
+        &#34;&#34;&#34;
+        Initializes the Inspection class with a DataFrame.
+
+        Parameters:
+        -----------
+        df : pandas.DataFrame
+            The DataFrame to be inspected.
+
+        Returns:
+        --------
+        None
+        &#34;&#34;&#34;
+        df = df
+
+    def standardscaler(col):
+        &#34;&#34;&#34;
+        Scales the specified numerical column using Standard Scaler.
+
+        The Standard Scaler standardizes features by removing the mean and scaling
+        to unit variance, which is beneficial for normally distributed data.
+
+        Parameters
+        ----------
+        col : str
+            The name of the column to be scaled.
+
+        Returns
+        -------
+        Scaled column of the specified cloumn name
+
+        Example
+        -------
+        &gt;&gt;&gt; scaler = NumericalScaler(df)
+        &gt;&gt;&gt; scaler.standardscaler(&#39;A&#39;)
+        &#39;A&#39; has been scaled using Standard Scaler.
+        &#34;&#34;&#34;
+        try:
+            if df[col].dtype in [&#34;int64&#34;, &#34;float64&#34;]:
+                scaler = StandardScaler()
+                df[[col]] = scaler.fit_transform(df[[col]])
+                print(f&#34;&#39;{col}&#39; has been scaled using Standard Scaler.&#34;)
+            else:
+                print(f&#34;Cannot apply Standard Scaler to non-numeric column &#39;{col}&#39;.&#34;)
+        except Exception as e:
+            print(f&#34;Cannot apply Standard Scaler to column &#39;{col}&#39; due to &#39;{e}&#39;&#34;)
+
+    def robustscaler(col):
+        &#34;&#34;&#34;
+        Scales the specified numerical column using Robust Scaler.
+
+        The Robust Scaler scales features using statistics that are robust to
+        outliers by removing the median and scaling according to the interquartile
+        range, making it useful for data with outliers.
+
+        Parameters
+        ----------
+        col : str
+            The name of the column to be scaled.
+
+        Returns
+        -------
+        Scaled column of the specified cloumn name
+
+        Example
+        -------
+        &gt;&gt;&gt; scaler = NumericalScaler(df)
+        &gt;&gt;&gt; scaler.robustscaler(&#39;B&#39;)
+        &#39;B&#39; has been scaled using Robust Scaler.
+        &#34;&#34;&#34;
+        try:
+            if df[col].dtype in [&#34;int64&#34;, &#34;float64&#34;]:
+                scaler = RobustScaler()
+                df[[col]] = scaler.fit_transform(df[[col]])
+                print(f&#34;&#39;{col}&#39; has been scaled using Robust Scaler.&#34;)
+            else:
+                print(f&#34;Cannot apply Robust Scaler to non-numeric column &#39;{col}&#39;.&#34;)
+        except Exception as e:
+            print(f&#34;Cannot apply Robust Scaler to column &#39;{col}&#39; due to &#39;{e}&#39;&#34;)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="eda.NumericalScaler.robustscaler"><code class="name flex">
+<span>def <span class="ident">robustscaler</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Scales the specified numerical column using Robust Scaler.</p>
+<p>The Robust Scaler scales features using statistics that are robust to
+outliers by removing the median and scaling according to the interquartile
+range, making it useful for data with outliers.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the column to be scaled.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Scaled column</code> of <code>the specified cloumn name</code></dt>
+<dd>&nbsp;</dd>
+</dl>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; scaler = NumericalScaler(df)
+&gt;&gt;&gt; scaler.robustscaler('B')
+'B' has been scaled using Robust Scaler.
+</code></pre></div>
+</dd>
+<dt id="eda.NumericalScaler.standardscaler"><code class="name flex">
+<span>def <span class="ident">standardscaler</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Scales the specified numerical column using Standard Scaler.</p>
+<p>The Standard Scaler standardizes features by removing the mean and scaling
+to unit variance, which is beneficial for normally distributed data.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the column to be scaled.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>Scaled column</code> of <code>the specified cloumn name</code></dt>
+<dd>&nbsp;</dd>
+</dl>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; scaler = NumericalScaler(df)
+&gt;&gt;&gt; scaler.standardscaler('A')
+'A' has been scaled using Standard Scaler.
+</code></pre></div>
+</dd>
+</dl>
+</dd>
+<dt id="eda.OutlierHander"><code class="flex name class">
+<span>class <span class="ident">OutlierHander</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>OutlierHander class for handling outliers in a pandas DataFrame using IQR and Z-score capping methods.</p>
+<p>The class provides methods to cap the outliers in numeric columns of a DataFrame using
+Interquartile Range (IQR) and Z-score methods.</p>
+<h2 id="methods">Methods</h2>
+<p>iqr_capping(col):
+Caps the outliers in the specified column based on the IQR method.</p>
+<p>zscore_capping(col):
+Caps the outliers in the specified column based on the Z-score method.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>df</code></strong> :&ensp;<code>pandas.DataFrame</code></dt>
+<dd>The DataFrame containing the data on which outlier capping will be applied.</dd>
+</dl>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; # Example usage of the OutlierHandler class:
+&gt;&gt;&gt; data = {'A': [1, 2, 3, 4, 100], 'B': [10, 20, 30, 40, 500]}
+&gt;&gt;&gt; df = pd.DataFrame(data)
+&gt;&gt;&gt; handler = OutlierHandler(df)
+&gt;&gt;&gt; handler.iqr_capping('A')  # Applies IQR capping on column 'A'
+&gt;&gt;&gt; handler.zscore_capping('B')  # Applies Z-score capping on column 'B'
+</code></pre>
+<p>Initializes the Inspection class with a DataFrame.</p>
+<h2 id="parameters_1">Parameters:</h2>
+<p>df : pandas.DataFrame
+The DataFrame to be inspected.</p>
+<h2 id="returns">Returns:</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class OutlierHander:
+    &#34;&#34;&#34;
+    OutlierHander class for handling outliers in a pandas DataFrame using IQR and Z-score capping methods.
+
+    The class provides methods to cap the outliers in numeric columns of a DataFrame using
+    Interquartile Range (IQR) and Z-score methods.
+
+    Methods
+    -------
+    iqr_capping(col):
+        Caps the outliers in the specified column based on the IQR method.
+
+    zscore_capping(col):
+        Caps the outliers in the specified column based on the Z-score method.
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        The DataFrame containing the data on which outlier capping will be applied.
+
+    Example
+    -------
+    &gt;&gt;&gt; # Example usage of the OutlierHandler class:
+    &gt;&gt;&gt; data = {&#39;A&#39;: [1, 2, 3, 4, 100], &#39;B&#39;: [10, 20, 30, 40, 500]}
+    &gt;&gt;&gt; df = pd.DataFrame(data)
+    &gt;&gt;&gt; handler = OutlierHandler(df)
+    &gt;&gt;&gt; handler.iqr_capping(&#39;A&#39;)  # Applies IQR capping on column &#39;A&#39;
+    &gt;&gt;&gt; handler.zscore_capping(&#39;B&#39;)  # Applies Z-score capping on column &#39;B&#39;
+    &#34;&#34;&#34;
+
+    def __init__(df):
+        &#34;&#34;&#34;
+        Initializes the Inspection class with a DataFrame.
+
+        Parameters:
+        -----------
+        df : pandas.DataFrame
+            The DataFrame to be inspected.
+
+        Returns:
+        --------
+        None
+        &#34;&#34;&#34;
+        df = df
+
+    def iqr_capping(col):
+        &#34;&#34;&#34;
+        Caps the outliers in the specified column using the IQR (Interquartile Range) method.
+
+        This method calculates the IQR of the column and caps the values outside
+        the lower and upper bounds defined by the IQR rule.
+
+        Parameters
+        ----------
+        col : str
+            The name of the column to apply IQR capping on.
+
+        Returns
+        -------
+        None
+
+        Example
+        -------
+        &gt;&gt;&gt; handler.iqr_capping(&#39;A&#39;)
+        Outliers in &#39;A&#39; have been capped using the IQR method.
+        Lower Bound: -2.5, Upper Bound: 8.5
+        &#34;&#34;&#34;
+        try:
+            if df[col].dtype in [&#34;int64&#34;, &#34;float64&#34;]:
+                Q1 = df[col].quantile(0.25)
+                Q3 = df[col].quantile(0.75)
+                IQR = Q3 - Q1
+                lower_bound = Q1 - 1.5 * IQR
+                upper_bound = Q3 + 1.5 * IQR
+
+                # Cap the values outside the bounds
+                df[col] = np.where(
+                    df[col] &lt; lower_bound,
+                    lower_bound,
+                    np.where(df[col] &gt; upper_bound, upper_bound, df[col]),
+                )
+
+                print(f&#34;Outliers in &#39;{col}&#39; have been capped using the IQR method.&#34;)
+                print(f&#34;Lower Bound: {lower_bound}, Upper Bound: {upper_bound}&#34;)
+            else:
+                print(f&#34;Cannot apply IQR capping to non-numeric column &#39;{col}&#39;.&#34;)
+
+        except Exception as e:
+            print(&#34;Cannot perform IQR outlier capping to the column &#39;{col}&#39; due to {e}&#34;)
+
+    def zscore_capping(col):
+        &#34;&#34;&#34;
+        Caps the outliers in the specified column using the Z-score method.
+
+        This method uses the Z-score to identify outliers and caps values
+        that fall outside a specified threshold.
+
+        Parameters
+        ----------
+        col : str
+            The name of the column to apply Z-score capping on.
+
+        Returns
+        -------
+        None
+
+        Example
+        -------
+        &gt;&gt;&gt; handler.zscore_capping(&#39;B&#39;)
+        Outliers in &#39;B&#39; have been capped using the Z-score method with a threshold of 3.
+        Lower Bound: -25.0, Upper Bound: 125.0
+        &#34;&#34;&#34;
+        try:
+            if df[col].dtype in [&#34;int64&#34;, &#34;float64&#34;]:
+                threshold = 3
+                mean = df[col].mean()
+                std = df[col].std()
+                z_scores = stats.zscore(df[col].dropna())
+
+                lower_bound = mean - threshold * std
+                upper_bound = mean + threshold * std
+
+                # Cap the values outside the bounds based on Z-score threshold
+                df[col] = np.where(
+                    z_scores &lt; -threshold,
+                    lower_bound,
+                    np.where(z_scores &gt; threshold, upper_bound, df[col]),
+                )
+
+                print(
+                    f&#34;Outliers in &#39;{col}&#39; have been capped using the Z-score method with a threshold of {col}.&#34;
+                )
+                print(f&#34;Lower Bound: {lower_bound}, Upper Bound: {upper_bound}&#34;)
+            else:
+                print(f&#34;Cannot apply Z-score capping to non-numeric column &#39;{col}&#39;.&#34;)
+        except Exception as e:
+            print(
+                &#34;Cannot perform Z-Score outlier capping to the column &#39;{col}&#39; due to {e}&#34;
+            )</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="eda.OutlierHander.iqr_capping"><code class="name flex">
+<span>def <span class="ident">iqr_capping</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Caps the outliers in the specified column using the IQR (Interquartile Range) method.</p>
+<p>This method calculates the IQR of the column and caps the values outside
+the lower and upper bounds defined by the IQR rule.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the column to apply IQR capping on.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>None</code></dt>
+<dd>&nbsp;</dd>
+</dl>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; handler.iqr_capping('A')
+Outliers in 'A' have been capped using the IQR method.
+Lower Bound: -2.5, Upper Bound: 8.5
+</code></pre></div>
+</dd>
+<dt id="eda.OutlierHander.zscore_capping"><code class="name flex">
+<span>def <span class="ident">zscore_capping</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Caps the outliers in the specified column using the Z-score method.</p>
+<p>This method uses the Z-score to identify outliers and caps values
+that fall outside a specified threshold.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the column to apply Z-score capping on.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><code>None</code></dt>
+<dd>&nbsp;</dd>
+</dl>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; handler.zscore_capping('B')
+Outliers in 'B' have been capped using the Z-score method with a threshold of 3.
+Lower Bound: -25.0, Upper Bound: 125.0
+</code></pre></div>
+</dd>
+</dl>
+</dd>
+<dt id="eda.VariableTransformer"><code class="flex name class">
+<span>class <span class="ident">VariableTransformer</span></span>
+</code></dt>
+<dd>
+<div class="desc"><p>VariableTransformer class used for transforming columns in a DataFrame using various techniques such as binning,
+log transformation, square root transformation, label encoding, and one-hot encoding.</p>
+<h2 id="methods">Methods</h2>
+<p>binner(col, bins):
+Performs binning on a numerical column.</p>
+<p>log_transformer(col):
+Applies a log transformation to a numerical column.</p>
+<p>sqrt_transformer(col):
+Applies a square root transformation to a numerical column.</p>
+<p>label_encoding(col):
+Applies label encoding to a categorical column.</p>
+<p>one_hot_encoding(col):
+Applies one-hot encoding to a categorical column.</p>
+<h2 id="examples">Examples</h2>
+<h1 id="sample-dataframe">Sample DataFrame</h1>
+<pre><code class="language-python-repl">&gt;&gt;&gt; data = {'Age': [23, 45, 12, 36, 50], 'Salary': [40000, 50000, 10000, 60000, 75000], 'Gender': ['Male', 'Female', 'Female', 'Male', 'Female']}
+&gt;&gt;&gt; df = pd.DataFrame(data)
+</code></pre>
+<h1 id="initialize-the-transformer">Initialize the transformer</h1>
+<pre><code class="language-python-repl">&gt;&gt;&gt; transformer = VariableTransformer(df)
+</code></pre>
+<h1 id="binning-age-column">Binning 'Age' column</h1>
+<pre><code class="language-python-repl">&gt;&gt;&gt; transformer.binner('Age', bins=[0, 20, 40, 60])
+</code></pre>
+<h1 id="log-transforming-salary-column">Log transforming 'Salary' column</h1>
+<pre><code class="language-python-repl">&gt;&gt;&gt; transformer.log_transformer('Salary')
+</code></pre>
+<h1 id="square-root-transforming-salary-column">Square root transforming 'Salary' column</h1>
+<pre><code class="language-python-repl">&gt;&gt;&gt; transformer.sqrt_transformer('Salary')
+</code></pre>
+<h1 id="label-encoding-gender-column">Label encoding 'Gender' column</h1>
+<pre><code class="language-python-repl">&gt;&gt;&gt; transformer.label_encoding('Gender')
+</code></pre>
+<h1 id="one-hot-encoding-gender-column">One-hot encoding 'Gender' column</h1>
+<pre><code class="language-python-repl">&gt;&gt;&gt; transformer.one_hot_encoding('Gender')
+</code></pre>
+<p>Initializes the Inspection class with a DataFrame.</p>
+<h2 id="parameters">Parameters:</h2>
+<p>df : pandas.DataFrame
+The DataFrame to be inspected.</p>
+<h2 id="returns">Returns:</h2>
+<p>None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class VariableTransformer:
+    &#34;&#34;&#34;
+    VariableTransformer class used for transforming columns in a DataFrame using various techniques such as binning,
+    log transformation, square root transformation, label encoding, and one-hot encoding.
+
+    Methods
+    -------
+    binner(col, bins):
+        Performs binning on a numerical column.
+
+    log_transformer(col):
+        Applies a log transformation to a numerical column.
+
+    sqrt_transformer(col):
+        Applies a square root transformation to a numerical column.
+
+    label_encoding(col):
+        Applies label encoding to a categorical column.
+
+    one_hot_encoding(col):
+        Applies one-hot encoding to a categorical column.
+
+    Examples
+    --------
+    # Sample DataFrame
+    &gt;&gt;&gt; data = {&#39;Age&#39;: [23, 45, 12, 36, 50], &#39;Salary&#39;: [40000, 50000, 10000, 60000, 75000], &#39;Gender&#39;: [&#39;Male&#39;, &#39;Female&#39;, &#39;Female&#39;, &#39;Male&#39;, &#39;Female&#39;]}
+    &gt;&gt;&gt; df = pd.DataFrame(data)
+
+    # Initialize the transformer
+    &gt;&gt;&gt; transformer = VariableTransformer(df)
+
+    # Binning &#39;Age&#39; column
+    &gt;&gt;&gt; transformer.binner(&#39;Age&#39;, bins=[0, 20, 40, 60])
+
+    # Log transforming &#39;Salary&#39; column
+    &gt;&gt;&gt; transformer.log_transformer(&#39;Salary&#39;)
+
+    # Square root transforming &#39;Salary&#39; column
+    &gt;&gt;&gt; transformer.sqrt_transformer(&#39;Salary&#39;)
+
+    # Label encoding &#39;Gender&#39; column
+    &gt;&gt;&gt; transformer.label_encoding(&#39;Gender&#39;)
+
+    # One-hot encoding &#39;Gender&#39; column
+    &gt;&gt;&gt; transformer.one_hot_encoding(&#39;Gender&#39;)
+    &#34;&#34;&#34;
+
+    def __init__(df):
+        &#34;&#34;&#34;
+        Initializes the Inspection class with a DataFrame.
+
+        Parameters:
+        -----------
+        df : pandas.DataFrame
+            The DataFrame to be inspected.
+
+        Returns:
+        --------
+        None
+        &#34;&#34;&#34;
+        df = df
+
+    def binner(col, bins):
+        &#34;&#34;&#34;
+        Perform binning on a numerical column.
+
+        Parameters
+        ----------
+        col : str
+            The name of the column to be binned.
+        bins : list
+            The boundaries for the bins.
+
+        Returns
+        -------
+        Binned transfomation of the specified column.
+
+        Example
+        -------
+        &gt;&gt;&gt; transformer.binner(&#39;Age&#39;, bins=[0, 20, 40, 60])
+        &#34;&#34;&#34;
+        try:
+            if df[col].dtype in [&#34;int64&#34;, &#34;float64&#34;]:
+                df[col] = pd.cut(df[col], bins=bins, include_lowest=True)
+                print(f&#34;&#39;{col}&#39; has been binned into {len(bins)-1} categories.&#34;)
+            else:
+                print(
+                    f&#34;Binning can only be applied to numeric columns. &#39;{col}&#39; is not numeric.&#34;
+                )
+        except Exception as e:
+            print(f&#34;Cannot apply Binning to column &#39;{col}&#39; due to &#39;{e}&#39;&#34;)
+
+    def log_transformer(col):
+        &#34;&#34;&#34;
+        Apply log transformation to a numerical column.
+
+        Parameters
+        ----------
+        col : str
+            The name of the column to be log-transformed.
+
+        Returns
+        -------
+        Logarithmic transformation of the specified column.
+
+        Example
+        -------
+        &gt;&gt;&gt; transformer.log_transformer(&#39;Salary&#39;)
+        &#34;&#34;&#34;
+        try:
+            if df[col].dtype in [&#34;int64&#34;, &#34;float64&#34;]:
+                df[col] = np.log1p(df[col])  # log1p to handle log(0)
+                print(f&#34;Log transformation applied to &#39;{col}&#39;.&#34;)
+            else:
+                print(
+                    f&#34;Log transformation can only be applied to numeric columns. &#39;{col}&#39; is not numeric.&#34;
+                )
+        except Exception as e:
+            print(f&#34;Cannot apply Log transformation to column &#39;{col}&#39; due to &#39;{e}&#39;&#34;)
+
+    def sqrt_transformer(col):
+        &#34;&#34;&#34;
+        Apply square root transformation to a numerical column.
+
+        Parameters
+        ----------
+        col : str
+            The name of the column to be square root transformed.
+
+        Returns
+        -------
+        Squared root transformation of the specified column.
+
+
+        Example
+        -------
+        &gt;&gt;&gt; transformer.sqrt_transformer(&#39;Salary&#39;)
+        &#34;&#34;&#34;
+        try:
+            if df[col].dtype in [&#34;int64&#34;, &#34;float64&#34;]:
+                df[col] = np.sqrt(df[col])
+                print(f&#34;Square root transformation applied to &#39;{col}&#39;.&#34;)
+            else:
+                print(
+                    f&#34;Square root transformation can only be applied to numeric columns. &#39;{col}&#39; is not numeric.&#34;
+                )
+        except Exception as e:
+            print(
+                f&#34;Cannot apply Square root transformation to column &#39;{col}&#39; due to &#39;{e}&#39;&#34;
+            )
+
+    def label_encoding(col):
+        &#34;&#34;&#34;
+        Apply label encoding to a categorical column.
+
+        Parameters
+        ----------
+        col : str
+            The name of the column to be label encoded.
+
+        Returns
+        -------
+        Label encoded transformation of the specified column.
+
+        Example
+        -------
+        &gt;&gt;&gt; transformer.label_encoding(&#39;Gender&#39;)
+        &#34;&#34;&#34;
+        try:
+            if df[col].dtype == &#34;object&#34;:
+                le = LabelEncoder()
+                df[col] = le.fit_transform(df[col])
+                print(f&#34;Label encoding applied to &#39;{col}&#39;.&#34;)
+            else:
+                print(
+                    f&#34;Label encoding can only be applied to categorical columns. &#39;{col}&#39; is not categorical.&#34;
+                )
+        except Exception as e:
+            print(f&#34;Cannot apply Label encoding to column &#39;{col}&#39; due to &#39;{e}&#39;&#34;)
+
+    def one_hot_encoding(col):
+        &#34;&#34;&#34;
+        Apply one-hot encoding to a categorical column.
+
+        Parameters
+        ----------
+        col : str
+            The name of the column to be label encoded.
+
+        Returns
+        -------
+        One-hot encoded transformation of the specified column.
+
+        Example
+        -------
+        &gt;&gt;&gt; transformer.one_encoding(&#39;Gender&#39;)
+        &#34;&#34;&#34;
+        try:
+            if df[col].dtype == &#34;object&#34;:
+                one_hot_encoder = OneHotEncoder(
+                    sparse_output=False, handle_unknown=&#34;ignore&#34;
+                )
+                df[col] = one_hot_encoder.fit_transform(df[[col]])
+                print(f&#34;One-hot encoding applied to &#39;{col}&#39;.&#34;)
+            else:
+                print(
+                    f&#34;One-hot encoding can only be applied to categorical columns. &#39;{col}&#39; is not categorical.&#34;
+                )
+        except Exception as e:
+            print(f&#34;Cannot apply One-hot encoding to column &#39;{col}&#39; due to &#39;{e}&#39;&#34;)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="eda.VariableTransformer.binner"><code class="name flex">
+<span>def <span class="ident">binner</span></span>(<span>col, bins)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Perform binning on a numerical column.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the column to be binned.</dd>
+<dt><strong><code>bins</code></strong> :&ensp;<code>list</code></dt>
+<dd>The boundaries for the bins.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Binned transfomation of the specified column.</p>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; transformer.binner('Age', bins=[0, 20, 40, 60])
+</code></pre></div>
+</dd>
+<dt id="eda.VariableTransformer.label_encoding"><code class="name flex">
+<span>def <span class="ident">label_encoding</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Apply label encoding to a categorical column.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the column to be label encoded.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Label encoded transformation of the specified column.</p>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; transformer.label_encoding('Gender')
+</code></pre></div>
+</dd>
+<dt id="eda.VariableTransformer.log_transformer"><code class="name flex">
+<span>def <span class="ident">log_transformer</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Apply log transformation to a numerical column.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the column to be log-transformed.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Logarithmic transformation of the specified column.</p>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; transformer.log_transformer('Salary')
+</code></pre></div>
+</dd>
+<dt id="eda.VariableTransformer.one_hot_encoding"><code class="name flex">
+<span>def <span class="ident">one_hot_encoding</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Apply one-hot encoding to a categorical column.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the column to be label encoded.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>One-hot encoded transformation of the specified column.</p>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; transformer.one_encoding('Gender')
+</code></pre></div>
+</dd>
+<dt id="eda.VariableTransformer.sqrt_transformer"><code class="name flex">
+<span>def <span class="ident">sqrt_transformer</span></span>(<span>col)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Apply square root transformation to a numerical column.</p>
+<h2 id="parameters">Parameters</h2>
+<dl>
+<dt><strong><code>col</code></strong> :&ensp;<code>str</code></dt>
+<dd>The name of the column to be square root transformed.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<p>Squared root transformation of the specified column.</p>
+<h2 id="example">Example</h2>
+<pre><code class="language-python-repl">&gt;&gt;&gt; transformer.sqrt_transformer('Salary')
+</code></pre></div>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="eda.DataTypeHandler" href="#eda.DataTypeHandler">DataTypeHandler</a></code></h4>
+<ul class="">
+<li><code><a title="eda.DataTypeHandler.to_datetime" href="#eda.DataTypeHandler.to_datetime">to_datetime</a></code></li>
+<li><code><a title="eda.DataTypeHandler.to_float" href="#eda.DataTypeHandler.to_float">to_float</a></code></li>
+<li><code><a title="eda.DataTypeHandler.to_int" href="#eda.DataTypeHandler.to_int">to_int</a></code></li>
+<li><code><a title="eda.DataTypeHandler.to_string" href="#eda.DataTypeHandler.to_string">to_string</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="eda.Inspection" href="#eda.Inspection">Inspection</a></code></h4>
+<ul class="">
+<li><code><a title="eda.Inspection.inspect" href="#eda.Inspection.inspect">inspect</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="eda.MissingValueHandler" href="#eda.MissingValueHandler">MissingValueHandler</a></code></h4>
+<ul class="two-column">
+<li><code><a title="eda.MissingValueHandler.b_fill" href="#eda.MissingValueHandler.b_fill">b_fill</a></code></li>
+<li><code><a title="eda.MissingValueHandler.drop" href="#eda.MissingValueHandler.drop">drop</a></code></li>
+<li><code><a title="eda.MissingValueHandler.f_fill" href="#eda.MissingValueHandler.f_fill">f_fill</a></code></li>
+<li><code><a title="eda.MissingValueHandler.linear" href="#eda.MissingValueHandler.linear">linear</a></code></li>
+<li><code><a title="eda.MissingValueHandler.mean" href="#eda.MissingValueHandler.mean">mean</a></code></li>
+<li><code><a title="eda.MissingValueHandler.median" href="#eda.MissingValueHandler.median">median</a></code></li>
+<li><code><a title="eda.MissingValueHandler.mode" href="#eda.MissingValueHandler.mode">mode</a></code></li>
+<li><code><a title="eda.MissingValueHandler.polynomial" href="#eda.MissingValueHandler.polynomial">polynomial</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="eda.NumericalScaler" href="#eda.NumericalScaler">NumericalScaler</a></code></h4>
+<ul class="">
+<li><code><a title="eda.NumericalScaler.robustscaler" href="#eda.NumericalScaler.robustscaler">robustscaler</a></code></li>
+<li><code><a title="eda.NumericalScaler.standardscaler" href="#eda.NumericalScaler.standardscaler">standardscaler</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="eda.OutlierHander" href="#eda.OutlierHander">OutlierHander</a></code></h4>
+<ul class="">
+<li><code><a title="eda.OutlierHander.iqr_capping" href="#eda.OutlierHander.iqr_capping">iqr_capping</a></code></li>
+<li><code><a title="eda.OutlierHander.zscore_capping" href="#eda.OutlierHander.zscore_capping">zscore_capping</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="eda.VariableTransformer" href="#eda.VariableTransformer">VariableTransformer</a></code></h4>
+<ul class="">
+<li><code><a title="eda.VariableTransformer.binner" href="#eda.VariableTransformer.binner">binner</a></code></li>
+<li><code><a title="eda.VariableTransformer.label_encoding" href="#eda.VariableTransformer.label_encoding">label_encoding</a></code></li>
+<li><code><a title="eda.VariableTransformer.log_transformer" href="#eda.VariableTransformer.log_transformer">log_transformer</a></code></li>
+<li><code><a title="eda.VariableTransformer.one_hot_encoding" href="#eda.VariableTransformer.one_hot_encoding">one_hot_encoding</a></code></li>
+<li><code><a title="eda.VariableTransformer.sqrt_transformer" href="#eda.VariableTransformer.sqrt_transformer">sqrt_transformer</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.11.1</a>.</p>
+</footer>
+</body>
+</html>
