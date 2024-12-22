@@ -1,0 +1,17 @@
+langchain
+langchain-community
+langchain-core
+ollama 
+fastapi
+pypdf 
+black 
+pdoc3
+aiofiles
+streamlit
+python-multipart
+faiss-cpu
+sentence_transformers
+colab-xterm
+uvicorn
+
+-e .
