@@ -1,0 +1,4 @@
+langchain
+streamlit
+langchain-community==0.2.7
+db-sqlite3
